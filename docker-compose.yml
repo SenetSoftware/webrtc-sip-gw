@@ -3,7 +3,7 @@ version: "3.3"
 services:
   webrtc-sip-gw:
     container_name: webrtc-sip-gw
-    image: ghcr.io/florian-h05/webrtc-sip-gw
+    image: webrtc-sip-gw
     restart: always
     network_mode: host
     volumes:

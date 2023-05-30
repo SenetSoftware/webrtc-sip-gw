@@ -1,13 +1,9 @@
 BUILD   ?= $(shell date +%Y%m%d%H%M)
 TAG     ?= $(shell git describe --abbrev=0)
 VERSION := $(TAG)-$(BUILD)
-IMAGE   := ghcr.io/florian-h05/webrtc-sip-gw
 
 build:
-	docker buildx build --platform linux/amd64 -t $(IMAGE):latest -t $(IMAGE):$(VERSION) --rm .
-
-push:
-	docker push $(IMAGE)
+	docker buildx build --network=host --platform linux/amd64 -t webrtc-sip-gw:latest --rm .
 
 run:
 	docker-compose up -d
@@ -20,3 +16,8 @@ login:
 
 logs:
 	docker-compose logs --follow
+
+
+# 11/6
+# 19 112
+# 10 2-5
