@@ -10,7 +10,8 @@ sed -i -e "s/FILL_MY_IP/${MY_IP}/g" /etc/rtpengine/rtpengine.conf
 sed -i -e "s/FILL_MY_IP/${MY_IP}/g" /etc/kamailio/kamailio.cfg
 
 sed -i -e "s/FILL_VPN_IP/${VPN_IP}/g" /etc/kamailio/kamailio.cfg
-sed -i -e "s/FILL_VPN_IP/${VPN_IP}/g" /etc/kamailio/kamailio.cfg
+sed -i -e "s/FILL_VPN_IP/${VPN_IP}/g" /etc/rtpengine/rtpengine.conf
+
 
 sed -i -e "s/FILL_MY_IP/${MY_IP}/g" /healthcheck.sh
 
