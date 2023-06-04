@@ -50,3 +50,7 @@ COPY ./config/kamailio/tls.cfg /etc/kamailio/tls.cfg
 ENTRYPOINT ["/entrypoint.sh"]
 
 CMD ["/usr/bin/supervisord -n -c /etc/supervisor/supervisord.conf -u root"]
+
+
+			# $xavp(Via=>branch) = "FILL_VPN_IP";
+			# via_use_xavp_fields("1");

@@ -4,6 +4,7 @@ VERSION := $(TAG)-$(BUILD)
 
 build:
 	docker buildx build --network=host --platform linux/amd64 -t webrtc-sip-gw:latest --rm .
+	docker build caddy
 
 run:
 	docker-compose up -d

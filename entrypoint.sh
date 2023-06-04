@@ -2,7 +2,7 @@
 set -e
 
 #MY_IP=`ip addr | grep 'state UP' -A2 | tail -n1 | awk '{print $2}' | cut -f1  -d'/'`
-MY_IP=$(hostname -I | awk '{print $1}')
+MY_IP=$(ip a | grep vpn |  grep 172 | awk  '{print $2}' | head -c -4)
 VPN_IP=$(ip a | grep vpn |  grep 172 | awk  '{print $2}' | head -c -4)
 MY_DOMAIN=api-noor.senetlab.com
 

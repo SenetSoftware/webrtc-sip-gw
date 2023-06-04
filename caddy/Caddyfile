@@ -1,0 +1,12 @@
+{
+    http_port 8080
+}
+
+api-noor.senetlab.com:4443 {
+    bind 41.187.100.27
+    reverse_proxy {$KAMAILIO_IP}:4443 {
+        transport http {
+			tls_insecure_skip_verify
+		}
+    }
+}

@@ -1,3 +1,9 @@
+# some notes::::
+- don't forget to place SSL certs from the caddy data dir in the ssl dir here.
+- for some reason caddy doesn't like running on 4443 or whatever so copy those same certs there in caddy formats and stuff
+- public ips are hardcoded so take that into account plz.
+thanks!
+
 # webrtc-sip-gw
 
 A [SIP over WebSocket](https://datatracker.ietf.org/doc/html/rfc7118) - [SIP](https://datatracker.ietf.org/doc/html/rfc3261) gateway for the AVM Fritz!Box based on [Kamailio](https://www.kamailio.org/w/) and [rtpengine](https://github.com/sipwise/rtpengine).
