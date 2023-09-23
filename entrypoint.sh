@@ -2,8 +2,8 @@
 set -e
 
 #MY_IP=`ip addr | grep 'state UP' -A2 | tail -n1 | awk '{print $2}' | cut -f1  -d'/'`
-MY_IP=$(ip a | grep vpn |  grep 172 | awk  '{print $2}' | head -c -4)
-VPN_IP=$(ip a | grep vpn |  grep 172 | awk  '{print $2}' | head -c -4)
+MY_IP=10.10.19.28 #$(ip a | grep vpn |  grep 172 | awk  '{print $2}' | head -c -4)
+VPN_IP=10.10.19.28 #$(ip a | grep vpn |  grep 172 | awk  '{print $2}' | head -c -4)
 MY_DOMAIN=api-noor.senetlab.com
 
 sed -i -e "s/FILL_MY_IP/${MY_IP}/g" /etc/rtpengine/rtpengine.conf

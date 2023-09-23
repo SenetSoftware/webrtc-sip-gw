@@ -12,10 +12,3 @@ services:
     environment:
      - TLS_DISABLE=false # Optional, defaults to false
   
-  caddy:
-    build: caddy
-    network_mode: host
-    environment:
-      - KAMAILIO_IP=172.21.1.4
-    volumes:
-      - /root/sip-gw/webrtc-sip-gw/data:/data # can't resolve the bound vpn ip so ig host net>
